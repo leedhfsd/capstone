@@ -28,7 +28,9 @@ app.post('/location', (req, res) => {
         gu: req.body[i].gu,
         dong:req.body[i].dong,
         nx:req.body[i].nx,
-        ny:req.body[i].ny
+        ny:req.body[i].ny,
+        longitude:req.body[i].longitude,
+        latitude:req.body[i].latitude
       });
       newLocation.save((e) => {
         if (e) {
@@ -44,7 +46,9 @@ app.post('/location', (req, res) => {
     gu: req.body.gu,
     dong:req.body.dong,
     nx:req.body.nx,
-    ny:req.body.ny
+    ny:req.body.ny,
+    longitude:req.body.longitude,
+    latitude:req.body.latitude
   });
   newLocation.save((e) => {
     if (e) {

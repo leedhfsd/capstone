@@ -18,6 +18,12 @@ const locationSchema = new mongoose.Schema({
   },
   ny: {
     type: Number
+  },
+  longitude: {
+    type: Number
+  },
+  latitude: {
+    type: Number
   }
 });
 
