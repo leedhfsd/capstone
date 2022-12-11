@@ -73,12 +73,12 @@ app.post('/articles', (req, res) => {
   let utc = date.getTime() + (date.getTimezoneOffset() * 60 * 1000);
   let time_diff = 9 * 60 * 60 * 1000;
   let kst = new Date(utc + (time_diff));
-  let time = `${kst.getFullYear()}.${kst.getMonth()}.${kst.getDay()} ${kst.getHours()}:${kst.getMinutes()}:${kst.getSeconds()}`
+  let time = `${kst.getFullYear()}.${kst.getMonth()+1}.${kst.getDate()} ${kst.getHours()}:${kst.getMinutes()}:${kst.getSeconds()}`
   const newArticle = new Article({
     title: req.body.title,
     description: req.body.description,
     location: req.body.location,
-    craetedAt: time
+    createdAt: time
   });
   newArticle.save((e) => {
     if (e) {

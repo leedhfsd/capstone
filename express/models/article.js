@@ -10,7 +10,7 @@ const articleSchema = new mongoose.Schema({
   location: {
     type: String,
   },
-  craetedAt: {
+  createdAt: {
     type: String,
   },
   recommended: {
