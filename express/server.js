@@ -63,7 +63,7 @@ app.post('/location', (req, res) => {
 
 app.get('/articles', async (req, res) => {
   const articles = await Article.find().sort({
-    recommended: 'asc'
+    "_id": -1
   });
   res.send(articles);
 })
